@@ -1,0 +1,20 @@
+integrations:
+  demo-github-integration:
+    github-issue-example:
+      type: sync
+      runs: every half hour
+      returns:
+        - GithubIssue
+models:
+  GithubIssue:
+    id: integer
+    owner: string
+    repo: string
+    issue_number: number
+    title: string
+    author: string
+    author_id: string
+    state: string
+    date_created: date
+    date_last_modified: date
+    body: string
